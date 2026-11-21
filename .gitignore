@@ -1,0 +1,16 @@
+# Private configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Logs and local data
+*.log
+*.sqlite
+secrets/
