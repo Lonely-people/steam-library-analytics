@@ -6,13 +6,19 @@ from flask import Flask, jsonify, render_template
 def create_app() -> Flask:
     app = Flask(__name__)
 
+    from routes.games import bp as games_bp
+    from routes.games import register_error_handlers
+
+    app.register_blueprint(games_bp)
+    register_error_handlers(app)
+
     @app.get("/")
     def index():
         return render_template("index.html")
 
     @app.get("/api/health")
     def health():
-        return jsonify({"status": "ok", "phase": "S0"})
+        return jsonify({"status": "ok", "phase": "S5"})
 
     return app
 
