@@ -87,7 +87,60 @@
 
       "unit.minutes": "分钟",
       "unit.hours": "小时",
-      "total": "共 {n} 款"
+      "total": "共 {n} 款",
+
+      "purchases.title": "购买记录",
+      "purchases.select_game": "选择游戏",
+      "purchases.all_games": "全部游戏",
+      "purchases.add": "新增购买记录",
+      "purchases.add_title": "新增购买记录",
+      "purchases.edit_title": "编辑购买记录",
+      "purchases.empty": "暂无购买记录",
+      "purchases.hint_unknown": "没有购买记录并不代表免费。请确认消费记录是否完整。",
+
+      "pcol.game": "游戏",
+      "pcol.date": "购买日期",
+      "pcol.amount": "金额（CNY）",
+      "pcol.type": "类型",
+      "pcol.status": "状态",
+      "pcol.notes": "备注",
+      "pcol.actions": "操作",
+
+      "ptype.base": "基础游戏",
+      "ptype.dlc": "DLC",
+      "pstatus.paid": "已支付",
+      "pstatus.refunded": "已退款",
+
+      "form.purchase_date": "购买日期",
+      "form.paid_amount": "支付金额（CNY）",
+      "form.purchase_type": "类型",
+      "form.purchase_status": "状态",
+      "form.notes": "备注",
+      "form.records_hint": "勾选后，该游戏视为消费记录完整，才会进入成本统计。",
+
+      "cost.title": "消费概况",
+      "cost.net_paid": "净支出",
+      "cost.refunded": "已退款",
+      "cost.records": "记录数",
+      "cost.state": "消费状态",
+      "cost.per_hour": "每小时成本",
+      "cost.incomplete": "消费记录不完整",
+      "cost.complete": "消费记录完整",
+
+      "coststate.unknown": "消费未知",
+      "coststate.free": "零成本",
+      "coststate.paid": "已付费",
+      "coststate.none": "未标记",
+
+      "msg.purchase_created": "购买记录已添加",
+      "msg.purchase_updated": "购买记录已更新",
+      "msg.purchase_deleted": "购买记录已删除",
+      "msg.confirm_purchase": "确定删除这条购买记录吗？",
+      "msg.select_game_first": "请先选择一款游戏",
+      "msg.save_incomplete": "消费记录已标记为完整",
+      "msg.save_incomplete_off": "消费记录已标记为不完整",
+      "msg.mark_complete": "标记消费记录完整",
+      "msg.mark_incomplete": "标记为不完整"
     },
     "en": {
       "app.title": "Steam Library & Play-Cost Analysis",
@@ -167,7 +220,60 @@
       "msg.no_purchase": "0",
       "unit.minutes": "min",
       "unit.hours": "h",
-      "total": "{n} games"
+      "total": "{n} games",
+
+      "purchases.title": "Purchases",
+      "purchases.select_game": "Select a game",
+      "purchases.all_games": "All games",
+      "purchases.add": "Add purchase",
+      "purchases.add_title": "Add a purchase record",
+      "purchases.edit_title": "Edit purchase record",
+      "purchases.empty": "No purchase records",
+      "purchases.hint_unknown": "No records does not mean free. Confirm whether the cost data is complete.",
+
+      "pcol.game": "Game",
+      "pcol.date": "Purchase date",
+      "pcol.amount": "Amount (CNY)",
+      "pcol.type": "Type",
+      "pcol.status": "Status",
+      "pcol.notes": "Notes",
+      "pcol.actions": "Actions",
+
+      "ptype.base": "Base game",
+      "ptype.dlc": "DLC",
+      "pstatus.paid": "Paid",
+      "pstatus.refunded": "Refunded",
+
+      "form.purchase_date": "Purchase date",
+      "form.paid_amount": "Amount paid (CNY)",
+      "form.purchase_type": "Type",
+      "form.purchase_status": "Status",
+      "form.notes": "Notes",
+      "form.records_hint": "When checked, this game's cost data counts as complete and enters cost statistics.",
+
+      "cost.title": "Cost summary",
+      "cost.net_paid": "Net paid",
+      "cost.refunded": "Refunded",
+      "cost.records": "Records",
+      "cost.state": "Cost state",
+      "cost.per_hour": "Cost per hour",
+      "cost.incomplete": "Cost data incomplete",
+      "cost.complete": "Cost data complete",
+
+      "coststate.unknown": "Cost unknown",
+      "coststate.free": "Zero cost",
+      "coststate.paid": "Paid",
+      "coststate.none": "Not marked",
+
+      "msg.purchase_created": "Purchase added",
+      "msg.purchase_updated": "Purchase updated",
+      "msg.purchase_deleted": "Purchase deleted",
+      "msg.confirm_purchase": "Delete this purchase record?",
+      "msg.select_game_first": "Select a game first",
+      "msg.save_incomplete": "Cost data marked complete",
+      "msg.save_incomplete_off": "Cost data marked incomplete",
+      "msg.mark_complete": "Mark cost data complete",
+      "msg.mark_incomplete": "Mark incomplete"
     }
   };
 

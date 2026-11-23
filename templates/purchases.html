@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Purchases{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+    <h1 class="h3 mb-0" data-i18n="purchases.title"></h1>
+    <button id="add-purchase" type="button" class="btn btn-primary" data-i18n="purchases.add"></button>
+</div>
+
+<div class="alert alert-secondary small" data-i18n="purchases.hint_unknown"></div>
+
+<div class="card card-body mb-3">
+    <div class="row g-2 align-items-end">
+        <div class="col-12 col-md-5">
+            <label class="form-label" for="game-select" data-i18n="purchases.select_game"></label>
+            <select id="game-select" class="form-select">
+                <option value="" data-i18n="purchases.all_games"></option>
+            </select>
+        </div>
+        <div class="col-12 col-md-7" id="cost-panel"></div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover align-middle">
+        <thead class="table-light">
+        <tr>
+            <th data-i18n="pcol.game"></th>
+            <th data-i18n="pcol.date"></th>
+            <th class="text-end" data-i18n="pcol.amount"></th>
+            <th data-i18n="pcol.type"></th>
+            <th data-i18n="pcol.status"></th>
+            <th data-i18n="pcol.notes"></th>
+            <th data-i18n="pcol.actions"></th>
+        </tr>
+        </thead>
+        <tbody id="purchases-body"></tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="purchase-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="purchase-modal-title" class="modal-title h5"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label" for="p-game" data-i18n="purchases.select_game"></label>
+                    <select id="p-game" class="form-select"></select>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="p-date" data-i18n="form.purchase_date"></label>
+                        <input id="p-date" type="date" class="form-control">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="p-amount" data-i18n="form.paid_amount"></label>
+                        <input id="p-amount" type="number" min="0" step="0.01" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="p-type" data-i18n="form.purchase_type"></label>
+                        <select id="p-type" class="form-select">
+                            <option value="base" data-i18n="ptype.base"></option>
+                            <option value="dlc" data-i18n="ptype.dlc"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="p-status" data-i18n="form.purchase_status"></label>
+                        <select id="p-status" class="form-select">
+                            <option value="paid" data-i18n="pstatus.paid"></option>
+                            <option value="refunded" data-i18n="pstatus.refunded"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="p-notes" data-i18n="form.notes"></label>
+                    <textarea id="p-notes" class="form-control" rows="2" maxlength="500"></textarea>
+                </div>
+                <div class="form-check">
+                    <input id="p-records" class="form-check-input" type="checkbox">
+                    <label class="form-check-label" for="p-records" data-i18n="form.records_hint"></label>
+                </div>
+                <div id="purchase-error" class="alert alert-danger mt-3 mb-0 d-none"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+                        data-i18n="btn.cancel"></button>
+                <button id="purchase-save" type="button" class="btn btn-primary"
+                        data-i18n="btn.save"></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/purchases.js') }}"></script>
+{% endblock %}
