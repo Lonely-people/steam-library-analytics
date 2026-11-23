@@ -1,0 +1,4 @@
+{
+  "_fixture_note": "SIMULATED DATA for tests only: a profile whose game details are private. Steam returns 403 and no response body.",
+  "response": {}
+}
