@@ -1,4 +1,4 @@
-"""S0 smoke test: the Flask app can be created and serves the minimal index page."""
+"""Smoke test: the Flask app can be created and serves the library page."""
 
 import pytest
 
@@ -12,10 +12,17 @@ def client():
     return app.test_client()
 
 
-def test_index_returns_minimal_page(client):
+def test_root_redirects_to_library(client):
     response = client.get("/")
+    assert response.status_code == 302
+    assert response.headers["Location"].endswith("/library")
+
+
+def test_library_page_renders(client):
+    response = client.get("/library")
     assert response.status_code == 200
-    assert "Steam 个人游戏库与游玩成本分析系统".encode() in response.data
+    assert b"library.js" in response.data
+    assert b"i18n.js" in response.data
 
 
 def test_health_endpoint_returns_ok(client):

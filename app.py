@@ -1,6 +1,6 @@
 """Flask entry point for the Steam library and play-cost analysis system."""
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 
 
 def create_app() -> Flask:
@@ -8,13 +8,11 @@ def create_app() -> Flask:
 
     from routes.games import bp as games_bp
     from routes.games import register_error_handlers
+    from routes.pages import page_bp
 
     app.register_blueprint(games_bp)
+    app.register_blueprint(page_bp)
     register_error_handlers(app)
-
-    @app.get("/")
-    def index():
-        return render_template("index.html")
 
     @app.get("/api/health")
     def health():
