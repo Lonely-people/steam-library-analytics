@@ -11,16 +11,18 @@ def create_app() -> Flask:
     from routes.pages import page_bp
     from routes.purchases import bp as purchases_bp
     from routes.purchases import register_error_handlers as register_purchase_handlers
+    from routes.statistics import bp as stats_bp
 
     app.register_blueprint(games_bp)
     app.register_blueprint(purchases_bp)
+    app.register_blueprint(stats_bp)
     app.register_blueprint(page_bp)
     register_error_handlers(app)
     register_purchase_handlers(app)
 
     @app.get("/api/health")
     def health():
-        return jsonify({"status": "ok", "phase": "S6"})
+        return jsonify({"status": "ok", "phase": "S7"})
 
     return app
 

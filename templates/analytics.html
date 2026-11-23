@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Analytics{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-4" data-i18n="ana.title"></h1>
+
+<div class="row g-4">
+    <div class="col-12 col-lg-6">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span data-i18n="ana.genres"></span>
+            </div>
+            <div class="card-body">
+                <div id="genre-chart" style="height: 320px;"></div>
+                <p class="small text-muted mt-2 mb-0" data-i18n="ana.genres_note"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span data-i18n="ana.cost_rank"></span>
+                <select id="cost-order" class="form-select form-select-sm w-auto">
+                    <option value="expensive" data-i18n="ana.order_expensive"></option>
+                    <option value="cheap" data-i18n="ana.order_cheap"></option>
+                </select>
+            </div>
+            <div class="card-body">
+                <div id="cost-chart" style="height: 320px;"></div>
+                <p class="small text-muted mt-2 mb-0" data-i18n="ana.cost_desc"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span data-i18n="ana.idle"></span>
+                <span class="small text-muted">
+                    <span data-i18n="ana.idle_total"></span>:
+                    <strong id="idle-total">—</strong>
+                </span>
+            </div>
+            <div class="card-body">
+                <div id="idle-chart" style="height: 320px;"></div>
+                <p class="small text-muted mt-2 mb-0" data-i18n="ana.idle_note"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="card h-100">
+            <div class="card-header" data-i18n="ana.yearly"></div>
+            <div class="card-body">
+                <div id="yearly-chart" style="height: 320px;"></div>
+                <p class="small text-muted mt-2 mb-0">
+                    <span data-i18n="ana.yearly_note"></span>
+                    <span id="undated-note" class="d-block"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header" data-i18n="ana.zero_cost"></div>
+            <div class="card-body">
+                <div id="zero-cost-list" class="small text-muted"></div>
+                <p class="small text-muted mt-2 mb-0" data-i18n="ana.zero_note"></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='vendor/echarts/echarts.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+{% endblock %}

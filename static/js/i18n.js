@@ -140,7 +140,52 @@
       "msg.save_incomplete": "消费记录已标记为完整",
       "msg.save_incomplete_off": "消费记录已标记为不完整",
       "msg.mark_complete": "标记消费记录完整",
-      "msg.mark_incomplete": "标记为不完整"
+      "msg.mark_incomplete": "标记为不完整",
+
+      "dash.title": "总览",
+      "dash.total_games": "游戏总数",
+      "dash.total_hours": "总游玩时长",
+      "dash.known_spend": "已知消费",
+      "dash.unstarted_rate": "未启动率",
+      "dash.uncompleted_rate": "未通关率",
+      "dash.status_unknown": "状态待确认",
+      "dash.incomplete_cost": "消费记录不完整",
+      "dash.no_data": "暂无数据",
+      "dash.sync_status": "最近同步",
+      "dash.sync_never": "尚未同步",
+      "dash.sync_success": "成功",
+      "dash.sync_failed": "失败",
+      "dash.sync_running": "进行中",
+      "dash.view_analytics": "查看详细统计",
+
+      "ana.title": "统计分析",
+      "ana.genres": "题材游玩时长占比",
+      "ana.genres_note": "多题材游戏时长按题材数均分；未分类单独显示",
+      "ana.cost_rank": "每小时成本排行",
+      "ana.cost_desc": "消费记录完整、支出与时长均大于 0 的游戏",
+      "ana.order_expensive": "由贵到便宜",
+      "ana.order_cheap": "由便宜到贵",
+      "ana.idle": "付费吃灰榜",
+      "ana.idle_note": "消费完整、已付费但从未启动",
+      "ana.idle_total": "吃灰合计",
+      "ana.zero_cost": "零成本游戏",
+      "ana.zero_note": "费用确认为零，不参与付费成本排行",
+      "ana.yearly": "年度消费趋势",
+      "ana.yearly_note": "仅统计已记录、未退款的金额；无日期的记录不计入",
+      "ana.undated": "条无日期记录未计入",
+      "ana.uncategorised": "未分类",
+      "ana.no_data": "暂无数据",
+      "ana.per_hour": "元/小时",
+      "ana.yuan": "元",
+      "ana.minutes": "分钟",
+      "ana.games": "款",
+      "ana.count": "{n} 款"
+
+      ,"chart.genre_title": "题材游玩时长占比"
+      ,"chart.cost_title": "每小时成本排行（元）"
+      ,"chart.idle_title": "付费吃灰金额（元）"
+      ,"chart.yearly_title": "年度消费（元）"
+      ,"chart.hours": "小时"
     },
     "en": {
       "app.title": "Steam Library & Play-Cost Analysis",
@@ -273,7 +318,52 @@
       "msg.save_incomplete": "Cost data marked complete",
       "msg.save_incomplete_off": "Cost data marked incomplete",
       "msg.mark_complete": "Mark cost data complete",
-      "msg.mark_incomplete": "Mark incomplete"
+      "msg.mark_incomplete": "Mark incomplete",
+
+      "dash.title": "Dashboard",
+      "dash.total_games": "Games",
+      "dash.total_hours": "Total playtime",
+      "dash.known_spend": "Known spend",
+      "dash.unstarted_rate": "Unstarted rate",
+      "dash.uncompleted_rate": "Uncompleted rate",
+      "dash.status_unknown": "Status unconfirmed",
+      "dash.incomplete_cost": "Cost data incomplete",
+      "dash.no_data": "No data yet",
+      "dash.sync_status": "Last sync",
+      "dash.sync_never": "Never synced",
+      "dash.sync_success": "Succeeded",
+      "dash.sync_failed": "Failed",
+      "dash.sync_running": "Running",
+      "dash.view_analytics": "Open analytics",
+
+      "ana.title": "Analytics",
+      "ana.genres": "Playtime by genre",
+      "ana.genres_note": "A multi-genre game's playtime is split evenly; uncategorised games are shown separately",
+      "ana.cost_rank": "Cost per hour ranking",
+      "ana.cost_desc": "Games with complete cost data, positive spend and positive playtime",
+      "ana.order_expensive": "Most expensive first",
+      "ana.order_cheap": "Cheapest first",
+      "ana.idle": "Paid but unplayed",
+      "ana.idle_note": "Complete cost data, paid, never launched",
+      "ana.idle_total": "Idle spend total",
+      "ana.zero_cost": "Zero-cost games",
+      "ana.zero_note": "Confirmed zero cost; excluded from paid cost rankings",
+      "ana.yearly": "Yearly spend",
+      "ana.yearly_note": "Counts recorded, non-refunded amounts only; undated records are omitted",
+      "ana.undated": "undated records omitted",
+      "ana.uncategorised": "Uncategorised",
+      "ana.no_data": "No data yet",
+      "ana.per_hour": "CNY/hour",
+      "ana.yuan": "CNY",
+      "ana.minutes": "min",
+      "ana.games": "games",
+      "ana.count": "{n} games",
+
+      "chart.genre_title": "Playtime by genre",
+      "chart.cost_title": "Cost per hour (CNY)",
+      "chart.idle_title": "Idle spend (CNY)",
+      "chart.yearly_title": "Yearly spend (CNY)",
+      "chart.hours": "hours"
     }
   };
 

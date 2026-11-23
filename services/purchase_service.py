@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import datetime as dt
 from dataclasses import dataclass
-from decimal import Decimal, InvalidOperation
+from decimal import ROUND_HALF_UP, Decimal, InvalidOperation
 from typing import Any
 
 from database.db import get_connection
@@ -70,9 +70,9 @@ class CostSummary:
     def __post_init__(self) -> None:
         # SUM() over zero rows returns 0 (scale 0), not 0.00. Normalise once
         # here so every consumer sees the same 2-decimal money format.
-        object.__setattr__(self, "net_paid", self.net_paid.quantize(Decimal("0.01")))
+        object.__setattr__(self, "net_paid", self.net_paid.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
         object.__setattr__(
-            self, "refunded_total", self.refunded_total.quantize(Decimal("0.01"))
+            self, "refunded_total", self.refunded_total.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
         )
 
     @property
@@ -90,7 +90,9 @@ class CostSummary:
         """Net paid cost per hour; undefined when free or unplayed."""
         if self.net_paid <= 0 or self.play_minutes <= 0:
             return None
-        return (self.net_paid * 60 / self.play_minutes).quantize(Decimal("0.01"))
+        return (self.net_paid * 60 / self.play_minutes).quantize(
+                Decimal("0.01"), rounding=ROUND_HALF_UP
+            )
 
 
 _PURCHASE_SELECT = """
