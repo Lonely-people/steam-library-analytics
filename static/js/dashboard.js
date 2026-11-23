@@ -58,7 +58,7 @@
     var row = qs("kpi-row");
     row.innerHTML = "";
     row.appendChild(tile("dash.total_games", String(ov.total_games),
-      ov.hidden_games ? "+ " + ov.hidden_games + " hidden" : null));
+      ov.hidden_games ? "+ " + ov.hidden_games + " " + t("form.hidden") : null));
     row.appendChild(tile("dash.total_hours", (ov.total_minutes / 60).toFixed(1) + " " +
       t("chart.hours")));
     row.appendChild(tile("dash.known_spend", "¥" + ov.known_spend,
@@ -67,6 +67,14 @@
         : null));
     row.appendChild(tile("dash.unstarted_rate", percent(ov.unstarted_rate),
       ov.unstarted_count + " / " + ov.total_games));
+
+    // PLAN.md §6.1 requires the uncompleted rate on the dashboard. The
+    // denominator is only the games whose status the user actually set;
+    // "status unconfirmed" is reported separately so the rate cannot be
+    // read as covering the whole library.
+    row.appendChild(tile("dash.uncompleted_rate", percent(ov.uncompleted_rate),
+      ov.uncompleted_count + " / " + ov.completion_determined));
+    row.appendChild(tile("dash.status_unknown", String(ov.status_unknown_count)));
   }
 
   function renderSync(logs) {

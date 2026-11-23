@@ -36,16 +36,12 @@
       "col.progress": "进度",
       "col.purchases": "购买记录",
       "col.actions": "操作",
-      "col.source": "来源",
-
       "btn.edit": "编辑",
       "btn.hide": "隐藏",
       "btn.unhide": "取消隐藏",
       "btn.delete": "删除",
       "btn.save": "保存",
       "btn.cancel": "取消",
-      "btn.confirm": "确认",
-
       "form.name": "游戏名称",
       "form.developer": "开发商",
       "form.acquisition": "获取方式",
@@ -82,7 +78,6 @@
       "msg.sync_fail": "同步失败",
       "msg.confirm_delete": "确定删除这个手动游戏吗？其购买记录也会一并删除。",
       "msg.error": "操作失败",
-      "msg.cancel": "已取消",
       "msg.no_purchase": "0 条",
 
       "unit.minutes": "分钟",
@@ -117,12 +112,9 @@
       "form.purchase_status": "状态",
       "form.notes": "备注",
       "form.records_hint": "勾选后，该游戏视为消费记录完整，才会进入成本统计。",
-
-      "cost.title": "消费概况",
       "cost.net_paid": "净支出",
       "cost.refunded": "已退款",
       "cost.records": "记录数",
-      "cost.state": "消费状态",
       "cost.per_hour": "每小时成本",
       "cost.incomplete": "消费记录不完整",
       "cost.complete": "消费记录完整",
@@ -136,12 +128,6 @@
       "msg.purchase_updated": "购买记录已更新",
       "msg.purchase_deleted": "购买记录已删除",
       "msg.confirm_purchase": "确定删除这条购买记录吗？",
-      "msg.select_game_first": "请先选择一款游戏",
-      "msg.save_incomplete": "消费记录已标记为完整",
-      "msg.save_incomplete_off": "消费记录已标记为不完整",
-      "msg.mark_complete": "标记消费记录完整",
-      "msg.mark_incomplete": "标记为不完整",
-
       "dash.title": "总览",
       "dash.total_games": "游戏总数",
       "dash.total_hours": "总游玩时长",
@@ -150,7 +136,6 @@
       "dash.uncompleted_rate": "未通关率",
       "dash.status_unknown": "状态待确认",
       "dash.incomplete_cost": "消费记录不完整",
-      "dash.no_data": "暂无数据",
       "dash.sync_status": "最近同步",
       "dash.sync_never": "尚未同步",
       "dash.sync_success": "成功",
@@ -179,13 +164,7 @@
       "ana.yuan": "元",
       "ana.minutes": "分钟",
       "ana.games": "款",
-      "ana.count": "{n} 款"
-
-      ,"chart.genre_title": "题材游玩时长占比"
-      ,"chart.cost_title": "每小时成本排行（元）"
-      ,"chart.idle_title": "付费吃灰金额（元）"
-      ,"chart.yearly_title": "年度消费（元）"
-      ,"chart.hours": "小时"
+      "chart.hours": "小时"
     },
     "en": {
       "app.title": "Steam Library & Play-Cost Analysis",
@@ -215,16 +194,12 @@
       "col.progress": "Progress",
       "col.purchases": "Purchases",
       "col.actions": "Actions",
-      "col.source": "Source",
-
       "btn.edit": "Edit",
       "btn.hide": "Hide",
       "btn.unhide": "Unhide",
       "btn.delete": "Delete",
       "btn.save": "Save",
       "btn.cancel": "Cancel",
-      "btn.confirm": "Confirm",
-
       "form.name": "Game name",
       "form.developer": "Developer",
       "form.acquisition": "Acquired via",
@@ -261,7 +236,6 @@
       "msg.sync_fail": "Sync failed",
       "msg.confirm_delete": "Delete this manual game? Its purchase records are deleted too.",
       "msg.error": "Operation failed",
-      "msg.cancel": "Cancelled",
       "msg.no_purchase": "0",
       "unit.minutes": "min",
       "unit.hours": "h",
@@ -295,12 +269,9 @@
       "form.purchase_status": "Status",
       "form.notes": "Notes",
       "form.records_hint": "When checked, this game's cost data counts as complete and enters cost statistics.",
-
-      "cost.title": "Cost summary",
       "cost.net_paid": "Net paid",
       "cost.refunded": "Refunded",
       "cost.records": "Records",
-      "cost.state": "Cost state",
       "cost.per_hour": "Cost per hour",
       "cost.incomplete": "Cost data incomplete",
       "cost.complete": "Cost data complete",
@@ -314,12 +285,6 @@
       "msg.purchase_updated": "Purchase updated",
       "msg.purchase_deleted": "Purchase deleted",
       "msg.confirm_purchase": "Delete this purchase record?",
-      "msg.select_game_first": "Select a game first",
-      "msg.save_incomplete": "Cost data marked complete",
-      "msg.save_incomplete_off": "Cost data marked incomplete",
-      "msg.mark_complete": "Mark cost data complete",
-      "msg.mark_incomplete": "Mark incomplete",
-
       "dash.title": "Dashboard",
       "dash.total_games": "Games",
       "dash.total_hours": "Total playtime",
@@ -328,7 +293,6 @@
       "dash.uncompleted_rate": "Uncompleted rate",
       "dash.status_unknown": "Status unconfirmed",
       "dash.incomplete_cost": "Cost data incomplete",
-      "dash.no_data": "No data yet",
       "dash.sync_status": "Last sync",
       "dash.sync_never": "Never synced",
       "dash.sync_success": "Succeeded",
@@ -357,12 +321,6 @@
       "ana.yuan": "CNY",
       "ana.minutes": "min",
       "ana.games": "games",
-      "ana.count": "{n} games",
-
-      "chart.genre_title": "Playtime by genre",
-      "chart.cost_title": "Cost per hour (CNY)",
-      "chart.idle_title": "Idle spend (CNY)",
-      "chart.yearly_title": "Yearly spend (CNY)",
       "chart.hours": "hours"
     }
   };

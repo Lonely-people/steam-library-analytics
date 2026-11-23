@@ -95,8 +95,8 @@
             + "<br/>" + t("ana.minutes") + ": " + row.play_minutes;
         }
       },
-      grid: { left: 8, right: 56, top: 16, bottom: 8, containLabel: true },
-      xAxis: { type: "value", name: t("ana.per_hour"), nameLocation: "end", nameGap: 8 },
+      grid: { left: 8, right: 24, top: 16, bottom: 24, containLabel: true },
+      xAxis: { type: "value", name: t("ana.per_hour"), nameLocation: "middle", nameGap: 26 },
       yAxis: {
         type: "category",
         data: rows.map(function (r) { return r.game_name; }),
@@ -129,8 +129,8 @@
           return row.game_name + "<br/>" + t("ana.yuan") + ": " + row.net_paid;
         }
       },
-      grid: { left: 8, right: 56, top: 16, bottom: 8, containLabel: true },
-      xAxis: { type: "value", name: t("ana.yuan"), nameLocation: "end", nameGap: 8 },
+      grid: { left: 8, right: 24, top: 16, bottom: 24, containLabel: true },
+      xAxis: { type: "value", name: t("ana.yuan"), nameLocation: "middle", nameGap: 26 },
       yAxis: {
         type: "category",
         data: rows.map(function (r) { return r.game_name; }),
